@@ -1,0 +1,43 @@
+var ExampleActions = require('../actions/exampleActions');
+
+module.exports = {
+
+    getSelectData: function() {
+        ExampleActions.getSelectData([
+            'cosa1',
+            'cosa2',
+            'cosa3',
+            'cosa4',
+            'cosa5',
+            'cosa6',
+            'cosa7',
+            'cosa8',
+            'cosa9',
+            'cosa10'
+        ]);
+    },
+
+    getDescriptionForCosa: function(cosa) {
+        if (cosa.indexOf('1')>0 ||
+            cosa.indexOf('3')>0 ||
+            cosa.indexOf('4')>0 ||
+            cosa.indexOf('6')>0 ||
+            cosa.indexOf('7')>0 ) {
+
+            ExampleActions.getDataDescription({
+                field1 : 'caca',
+                field2 : 'culo',
+                field3 : 'pedo',
+                field4 : 'pis'
+            });
+        } else {
+            ExampleActions.getDataDescription({
+                field1 : 'hola',
+                field2 : 'que',
+                field3 : 'tal',
+                field4 : 'pis'
+            });
+        }
+    }
+
+};
